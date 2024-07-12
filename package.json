@@ -14,6 +14,7 @@
   "author": "Jensone",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
@@ -28,8 +29,10 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
+    "openai": "^4.52.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "uuid": "^10.0.0"
   }
 }
