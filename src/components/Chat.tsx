@@ -1,8 +1,10 @@
 export default function Chat() {
 
-    const askOpenAI = (e: React.FormEvent<HTMLFormElement>) => {}
-    const deleteChat = (id: number) => {}
-    
+    const askOpenAI = (e: React.FormEvent<HTMLFormElement>) => {
+        console.log(e.target);
+    }
+    // const deleteChat = (id: number) => {}
+
     return (
         <section>
             <form

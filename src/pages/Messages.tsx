@@ -12,8 +12,12 @@ interface Chat {
     date: string;
 }
 
+interface Chats {
+    chats: Chat[];
+}
+
 export default function Messages() {
-    const [chats, setChats] = useState<Chat[]>([
+    const chatsArray = useState<Chats[] | any>([
         {
             id: 1,
             question: "De quoi allons nous parler aujourd'hui ?",
@@ -35,7 +39,7 @@ export default function Messages() {
                     Messages
                 </h1>
                 <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {chats.map((c) => (
+                    {chatsArray.map((c) => (
                         <li
                             className="border h-46 p-5 rounded-xl bg-white hover:shadow-md"
                             key={c.id}
@@ -45,7 +49,7 @@ export default function Messages() {
                             </div>
                             <hr className="my-4" />
                             <div className="italic text-slate-400">
-                                {c.question.substring(0, 100) + '...'}
+                                {c.question}
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <NavLink to="/messages/:id" className="bg-blue-500 rounded-full p-2 hover:bg-blue-800">

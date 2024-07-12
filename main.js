@@ -12,7 +12,7 @@ const createWindow = () => {
         }
     });
 
-    win.loadFile('index.html');
+    win.loadFile(path.join(__dirname,'dist/index.html'));
 };
 
 // Lancez l'application
