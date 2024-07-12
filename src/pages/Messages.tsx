@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Nav from '../components/Nav';
 import CalendarIcon from '../components/icons/CalendarICon';
 import EyeIcon from '../components/icons/EyeIcon';
-import { NavLink } from 'react-router-dom';
 import TrashIcon from '../components/icons/TrashIcon';
 
 interface Chat {
@@ -52,9 +51,9 @@ export default function Messages() {
                                 {c.question}
                             </div>
                             <div className="mt-4 flex justify-between">
-                                <NavLink to="/messages/:id" className="bg-blue-500 rounded-full p-2 hover:bg-blue-800">
+                                <button className="bg-blue-500 rounded-full p-2 hover:bg-blue-800">
                                     <EyeIcon />
-                                </NavLink>
+                                </button>
                                 <button className="bg-red-700 rounded-full p-2 hover:bg-red-800">
                                     <TrashIcon />
                                 </button>
