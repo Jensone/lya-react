@@ -3,21 +3,25 @@ import Chat from "../components/Chat";
 import Nav from "../components/Nav";
 import Typed from 'typed.js';
 
-export default function App() {
+export default function Home() {
   const el = useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['De quoi allons nous parler aujourd\'hui ?', 'Que souhaites-tu apprendre de nouveau ?', 'Comment puis-je t\'aider ?'],
+      strings: [
+        'De quoi allons nous parler aujourd\'hui ?', 
+        'Que souhaites-tu apprendre de nouveau ?', 
+        'Comment puis-je t\'aider ?'
+      ],
       typeSpeed: 20,
       contentType: 'html',
       loop: true,
       cursorChar: '...',
       fadeOut: true,
-      });
+    });
 
-      return () => {
-        typed.destroy();
-      };
+    return () => {
+      typed.destroy();
+    };
   }, []);
 
   return (

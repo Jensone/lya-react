@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Nav from '../components/Nav';
-import CalendarIcon from '../components/icons/CalendarICon';
 import EyeIcon from '../components/icons/EyeIcon';
 import TrashIcon from '../components/icons/TrashIcon';
+import CalendarIcon from '../components/icons/CalendarICon';
 
 interface Chat {
     id: number;
@@ -11,12 +11,8 @@ interface Chat {
     date: string;
 }
 
-interface Chats {
-    chats: Chat[];
-}
-
 export default function Messages() {
-    const chatsArray = useState<Chats[] | any>([
+    const [chats] = useState<Chat[]>([
         {
             id: 1,
             question: "De quoi allons nous parler aujourd'hui ?",
@@ -30,6 +26,7 @@ export default function Messages() {
             date: '2023-03-01',
         },
     ]);
+
     return (
         <main className="bg-slate-50 p-5 flex flex-col items-center gap-4 min-w-full min-h-screen">
             <Nav />
@@ -38,7 +35,7 @@ export default function Messages() {
                     Messages
                 </h1>
                 <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {chatsArray.map((c) => (
+                    {chats.map((c) => (
                         <li
                             className="border h-46 p-5 rounded-xl bg-white hover:shadow-md"
                             key={c.id}
