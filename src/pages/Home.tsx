@@ -23,7 +23,6 @@ export default function Home() {
       typed.destroy();
     };
   }, []);
-
   return (
     <main className="bg-slate-50 p-5 flex flex-col items-center justify-between min-w-full min-h-screen">
       <Nav />

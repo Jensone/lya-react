@@ -5,9 +5,7 @@ export default class Bartender {
     private preprompt: string;
 
     constructor() {
-        this.openai = new OpenAI({
-            apiKey: process.env.REACT_APP_OPENAI_API_KEY || ""
-        });
+        this.openai = new OpenAI({apiKey: import.meta.env.VITE_OPENAI_API_KEY});
         this.preprompt = "En tant que spécialiste en préparation de cocktail. Tu reçois des questions sur la thématique des cocktails, avec tes 20 années d'expérience tu dois répondre par un message simple, vulgarisé et drôle. Voici la question à laquelle tu répondras : ";
     }
 
